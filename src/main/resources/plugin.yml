@@ -1,0 +1,8 @@
+name: SuperLooperSnooper
+version: ${project.version}
+main: org.kitteh.superloopersnooper.SuperLooperSnooper
+api-version: 1.13
+load: STARTUP
+authors: [ mbaxter ]
+description: Finds cyclical dependency issues
+website: https://kitteh.org
