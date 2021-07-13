@@ -88,7 +88,7 @@ public final class SuperLooperSnooper extends JavaPlugin {
                 SuperLooperSnooper.this.getLogger().log(level, "Hello! I'm here to snoop for loops!");
                 SuperLooperSnooper.this.getLogger().log(level, "");
                 if (ex) {
-                    SuperLooperSnooper.this.getLogger().log(Level.SEVERE, " Unfortunately, I instead encountered an error!\n", SuperLooperSnooper.this.exception);
+                    SuperLooperSnooper.this.getLogger().log(level, " Unfortunately, I instead encountered an error!\n", SuperLooperSnooper.this.exception);
                     return;
                 }
                 if (empty) {
