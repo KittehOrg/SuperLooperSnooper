@@ -85,7 +85,7 @@ public final class SuperLooperSnooper extends JavaPlugin {
                 boolean empty = SuperLooperSnooper.this.cycles == null || SuperLooperSnooper.this.cycles.isEmpty();
                 Level level = (empty && !ex) ? Level.INFO : Level.SEVERE;
                 SuperLooperSnooper.this.getLogger().log(level, "");
-                SuperLooperSnooper.this.getLogger().log(level, "Hello! I'm here to snoop for loops!");
+                SuperLooperSnooper.this.getLogger().log(level, "I'm here to snoop for loops!");
                 SuperLooperSnooper.this.getLogger().log(level, "");
                 if (ex) {
                     SuperLooperSnooper.this.getLogger().log(level, " Unfortunately, I instead encountered an error!\n", SuperLooperSnooper.this.exception);
@@ -97,7 +97,7 @@ public final class SuperLooperSnooper extends JavaPlugin {
                 }
                 SuperLooperSnooper.this.getLogger().log(level, " Found dependency loops:");
                 for (List<String> list : SuperLooperSnooper.this.cycles) {
-                    SuperLooperSnooper.this.getLogger().log(level, "  " + list);
+                    SuperLooperSnooper.this.getLogger().log(level, "Loop between the following:  " + String.join(" -> ", list) + " -> ...");
                 }
                 SuperLooperSnooper.this.getLogger().log(level, "");
             }
